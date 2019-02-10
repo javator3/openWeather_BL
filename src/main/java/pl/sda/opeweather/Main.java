@@ -17,9 +17,9 @@ public class Main {
         WeatherService weatherService = new WeatherService(
                 "http://api.apixu.com/v1/current.json",
                 "23f7a82df6764a3986590706191002");
-        
+
         weatherService.getCityWeatherFullInfo("Bydgoszcz");
-        weatherService.getCityWeatherOnlyTemp("Bydgoszcz");
+        weatherService.getCityWeatherOnlyTemp();
 
 
 

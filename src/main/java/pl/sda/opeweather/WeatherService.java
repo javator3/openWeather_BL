@@ -5,9 +5,10 @@ import pl.sda.opeweather.model.Weather;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Scanner;
 
 public class WeatherService {
-
+    Scanner scanner = new Scanner(System.in);
     private String finalURL;
     private String url;
     private String apiKey;
@@ -31,7 +32,9 @@ public class WeatherService {
         }
     }
 
-    public void getCityWeatherOnlyTemp(String city){
+    public void getCityWeatherOnlyTemp(){
+        System.out.println("Podaj miasto dla którego mam sprawdzić pogode");
+        String city = scanner.nextLine();
         finalURL = url + "?key=" + apiKey + "&q=" + city;
         URL jsonURL = null;
         try {
